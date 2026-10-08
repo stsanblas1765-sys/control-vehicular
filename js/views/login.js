@@ -7,7 +7,7 @@ export function render(cont) {
   const aviso = alerta();
   const boton = h('button', { class: 'btn btn-pri btn-bloque', type: 'submit' }, 'Iniciar sesión');
   const form = h('form', { class: 'form', novalidate: true },
-    campo('Teléfono', entrada('telefono', { type: 'tel', inputmode: 'numeric', autocomplete: 'username', maxlength: 16, required: true, placeholder: '10 dígitos' })),
+    campo('Teléfono o usuario', entrada('telefono', { type: 'tel', inputmode: 'numeric', autocomplete: 'username', maxlength: 16, required: true, placeholder: 'Tu teléfono de 10 dígitos' })),
     campo('Contraseña', entradaPassword('password', 'current-password')),
     aviso,
     boton
@@ -17,8 +17,8 @@ export function render(cont) {
     ev.preventDefault();
     aviso.hidden = true;
     const d = datosForm(form);
-    if (d.telefono.replace(/\D/g, '').length < 10 || !d.password) {
-      return mostrarAlerta(aviso, 'Escribe tu teléfono de 10 dígitos y tu contraseña.');
+    if (d.telefono.replace(/\D/g, '').length < 4 || !d.password) {
+      return mostrarAlerta(aviso, 'Escribe tu teléfono (o usuario) y tu contraseña.');
     }
     await conCarga(boton, async () => {
       try {

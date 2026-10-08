@@ -4,6 +4,6 @@
  * VERSION: súbela en cada publicación (y también VERSION en sw.js).
  */
 export const CONFIG = {
-  API_URL: 'PEGA_AQUI_LA_URL_DEL_WEB_APP',
-  VERSION: '1.0.0'
+  API_URL: 'https://script.google.com/macros/s/AKfycbzUmIQm_wz4R59rOXisd6nEqvcUIt4OrCA1f8UwXUzqy8fTh9xhZHc2Ygf0YmCiy1fu/exec',
+  VERSION: '1.0.1'
 };

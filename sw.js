@@ -3,7 +3,7 @@
  * Cachea SOLO archivos estáticos de la app. Nunca intercepta la API (otro dominio)
  * ni guarda información del servidor. Sube VERSION en cada publicación.
  */
-const VERSION = 'cv-1.0.0';
+const VERSION = 'cv-1.0.1';
 const ARCHIVOS = [
   './', './index.html', './manifest.json', './css/app.css',
   './js/app.js', './js/api.js', './js/auth.js', './js/config.js', './js/idb.js', './js/ui.js',
